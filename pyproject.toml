@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cryptcheck"
+version = "0.1.0"
+description = "A cybersecurity CLI tool to analyze password complexity and verify breach exposure using k-Anonymity."
+readme = "README.md"
+authors = [
+    { name = "Sohan Shelar", email = "sohanshelar01@gmail.com" }
+]
+license = "MIT"
+requires-python = ">=3.8"
+keywords = ["security", "cybersecurity", "passwords", "iam", "pwned", "haveibeenpwned", "k-anonymity"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Security",
+    "Topic :: Security :: Cryptography",
+]
+dependencies = [
+    "requests>=2.25.0",
+]
+
+[project.scripts]
+cryptcheck = "cryptcheck.cli:main"
